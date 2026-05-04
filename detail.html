@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="assets/pokeball.svg" type="image/png">
+  <title>Detalhes do Pokemon</title>
+  <link rel="stylesheet" href="detail.css">
+  <script src="./pokemon-detail.js" defer></script>
+</head>
+
+<body>
+  <main class="detail-main">
+    <header class="detail-header">
+      <a href="./list.html" class="back-btn-wrap" aria-label="Voltar para a Pokemania">
+        <img src="./assets/back-to-home.svg" alt="">
+      </a>
+
+      <div>
+        <h1 class="name">Carregando...</h1>
+        <p class="pokemon-id-wrap">#---</p>
+      </div>
+    </header>
+
+    <section class="featured-img" aria-label="Imagem do Pokemon">
+      <button class="arrow left-arrow" id="leftArrow" type="button" aria-label="Pokemon anterior">
+        <img src="./assets/chevron_left.svg" alt="">
+      </button>
+
+      <div class="detail-img-wrapper">
+        <img src="" alt="">
+      </div>
+
+      <button class="arrow right-arrow" id="rightArrow" type="button" aria-label="Proximo Pokemon">
+        <img src="./assets/chevron_right.svg" alt="">
+      </button>
+    </section>
+
+    <section class="detail-card-detail-wrapper">
+      <div class="power-wrapper"></div>
+
+      <h2 class="about-text">Sobre</h2>
+
+      <div class="pokemon-detail-wrapper">
+        <div class="pokemon-detail-wrap">
+          <div class="pokemon-detail">
+            <img src="./assets/weight.svg" alt="">
+            <p class="weight"></p>
+          </div>
+          <p class="caption-fonts">Peso</p>
+        </div>
+
+        <div class="pokemon-detail-wrap">
+          <div class="pokemon-detail">
+            <img src="./assets/height.svg" alt="">
+            <p class="height"></p>
+          </div>
+          <p class="caption-fonts">Altura</p>
+        </div>
+
+        <div class="pokemon-detail-wrap">
+          <div class="pokemon-detail move"></div>
+          <p class="caption-fonts">Habilidades</p>
+        </div>
+      </div>
+
+      <p class="pokemon-description"></p>
+
+      <h2 class="about-text">Status Base</h2>
+      <div class="stats-wrapper"></div>
+    </section>
+
+    <img src="./assets/pokedex.svg" alt="" class="detail-bg">
+  </main>
+</body>
+</html>

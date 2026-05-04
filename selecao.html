@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="assets/pokeball.svg" type="image/png">
+  <title>Selecao de Time</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="selecao.css">
+  <script src="./selecao.js" defer></script>
+</head>
+
+<body>
+  <main class="main selection-main">
+    <header class="header selection-header">
+      <div class="header-top">
+        <a href="./index.html" class="logo-wrapper" aria-label="Voltar ao menu">
+          <img src="./assets/pokeball.svg" alt="">
+          <h1>Monte seu trio</h1>
+        </a>
+
+        <div class="header-actions">
+          <a href="./index.html" class="back-menu-btn">Menu</a>
+          <div class="led-container" aria-hidden="true">
+            <span class="led led-blue"></span>
+            <span class="led led-red"></span>
+            <span class="led led-green"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="selection-bar" aria-label="Pokemon escolhidos">
+      <p class="instruction">Selecione 3 Pokemon para lutar</p>
+      <div class="slots-container">
+        <div class="slot" id="slot-1">?</div>
+        <div class="slot" id="slot-2">?</div>
+        <div class="slot" id="slot-3">?</div>
+      </div>
+    </section>
+
+    <section class="pokemon-list" aria-live="polite">
+      <div class="list-wrapper" id="selection-grid"></div>
+    </section>
+
+    <footer class="footer-actions">
+      <button id="btn-lutar" class="btn-nintendo disabled" type="button" disabled>
+        Entrar na arena
+      </button>
+    </footer>
+  </main>
+</body>
+</html>

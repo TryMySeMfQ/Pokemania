@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="assets/pokeball.svg" type="image/png">
+  <title>Pokemania</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./pokemon.js" defer></script>
+  <script src="./search.js" defer></script>
+</head>
+
+<body>
+  <main class="main">
+    <header class="header home">
+      <div class="header-top">
+        <a href="./index.html" class="logo-wrapper" aria-label="Voltar ao menu">
+          <img src="./assets/pokeball.svg" alt="">
+          <h1>Pokemania</h1>
+        </a>
+
+        <div class="header-actions">
+          <a href="./index.html" class="back-menu-btn">Menu</a>
+          <div class="led-container" aria-hidden="true">
+            <span class="led led-blue"></span>
+            <span class="led led-red"></span>
+            <span class="led led-green"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-wrapper">
+        <div class="search-wrap">
+          <img src="./assets/search.svg" alt="" class="search-icon">
+          <input
+            type="search"
+            class="search-input"
+            placeholder="Buscar Pokemon"
+            id="search-input"
+            autocomplete="off"
+          >
+          <button class="search-close-icon" id="search-close-icon" type="button" aria-label="Limpar busca">
+            <img src="./assets/cross.svg" alt="">
+          </button>
+        </div>
+
+        <div class="sort-wrapper">
+          <button class="sort-wrap" type="button" aria-label="Ordenar lista" aria-expanded="false">
+            <img src="./assets/sorting.svg" alt="">
+          </button>
+
+          <div class="filter-wrapper">
+            <p>Ordenar por</p>
+            <label>
+              <input type="radio" id="number" name="filters" value="number" checked>
+              Numero
+            </label>
+            <label>
+              <input type="radio" id="name" name="filters" value="name">
+              Nome
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="pokemon-list" aria-live="polite">
+      <div class="list-wrapper"></div>
+      <div id="not-found-message" hidden>Pokemon nao encontrado</div>
+    </section>
+  </main>
+</body>
+</html>
