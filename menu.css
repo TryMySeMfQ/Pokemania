@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background:
+    radial-gradient(circle at top, rgba(255, 203, 5, 0.28), transparent 26rem),
+    #f3f4f6;
+  font-family: "Press Start 2P", cursive;
+}
+
+.menu-main {
+  width: min(100%, 460px);
+}
+
+.menu-card {
+  padding: clamp(16px, 4vw, 24px);
+  background: #d9272e;
+  border: 8px solid #1f2933;
+  border-radius: 18px 18px 52px 18px;
+  box-shadow: 10px 10px 0 #8f1118;
+}
+
+.menu-leds {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-leds span {
+  width: 16px;
+  height: 16px;
+  display: block;
+  border: 2px solid #1f2933;
+  border-radius: 50%;
+  background: #ffcb05;
+}
+
+.menu-leds span:nth-child(2) {
+  background: #ff5a5f;
+}
+
+.menu-leds span:nth-child(3) {
+  background: #63d471;
+}
+
+.menu-leds span:nth-child(4) {
+  background: #52c7ff;
+}
+
+.menu-leds .big-led {
+  width: 36px;
+  height: 36px;
+  background: #52c7ff;
+  box-shadow: inset -4px -4px 0 rgba(0, 0, 0, 0.22);
+}
+
+.menu-screen {
+  min-height: 230px;
+  padding: clamp(18px, 5vw, 32px);
+  display: grid;
+  place-items: center;
+  gap: 14px;
+  text-align: center;
+  background: #d9f0c4;
+  border: 6px solid #1f2933;
+  border-radius: 10px;
+  color: #0f380f;
+}
+
+.menu-logo {
+  width: clamp(62px, 20vw, 86px);
+}
+
+h1 {
+  font-size: clamp(1rem, 5vw, 1.45rem);
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.menu-screen p {
+  max-width: 25ch;
+  color: #306230;
+  font-size: 0.58rem;
+  line-height: 1.8;
+}
+
+.menu-buttons {
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.menu-btn {
+  min-height: 48px;
+  padding: 14px 12px;
+  display: grid;
+  place-items: center;
+  background: #1f2933;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 6px 0 #0b1117;
+  color: #ffffff;
+  font-size: 0.62rem;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.menu-btn.battle {
+  background: #ffcb05;
+  box-shadow: 0 6px 0 #c78900;
+  color: #1f2933;
+}
+
+.menu-btn:hover {
+  transform: translateY(-2px);
+}
+
+.menu-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #0b1117;
+}
+
+.menu-btn.battle:active {
+  box-shadow: 0 2px 0 #c78900;
+}
+
+@media (max-width: 420px) {
+  body {
+    align-items: stretch;
+  }
+
+  .menu-main {
+    display: grid;
+  }
+
+  .menu-card {
+    min-height: calc(100vh - 32px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-screen {
+    flex: 1;
+  }
+}
